@@ -62,7 +62,7 @@ class Motorcycle extends Vehicle { //inherits from vehicle
 }
 
 // The Main class where the program starts
-public class AAssignment {
+public class Assignment {
 
     //The main function
     public static void main(String[] args) {
