@@ -1,3 +1,17 @@
+/*
+-----
+- Ονοματεπώνυμο καταρτιζόμενου/ης: ΚΟΤΣΟΡΓΙΟΣ ΠΑΝΑΓΙΩΤΗΣ
+- Πατρώνυμο: ΔΗΜΗΤΡΗΣ
+- ΑΜΚ: 1053
+- Είδος (Θ ή Ε): Θ
+- Μάθημα: ΓΛΩΣΣΑ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ IV (ΑΝΤΙΚΕΙΜΕΝΟΣΤΡΑΦΗΣ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ C++) 
+- Ειδικότητα: ΤΕΧΝΙΚΟΣ ΛΟΓΙΣΜΙΚΟΥ Η/Υ
+- Εξάμηνο (Α ή Γ): Γ
+- Χειμερινό Εξάμηνο 2024Β
+- Ημερομηνία: 17/11/2024
+-----
+*/
+
 // The main Vehicle class
 class Vehicle {
     private String licenseNumber;
@@ -72,14 +86,27 @@ public class Main{
         // the same way create a motorcycle object
         Motorcycle motorcycleDucati = new Motorcycle("MO67890", "Ducati Panigale V4", 2021, "Sport", 300);
 
+	System.out.println();
+	System.out.println("---------");
         // Print car info
         System.out.println("Car Info:");
+	System.out.println("---------");
+        
+        
+	System.out.println("-----------------------");
         carTesla.displayInfo();
+	System.out.println("-----------------------");
         
         System.out.println();
 
         // Print motorcycle info
+	System.out.println();
+	System.out.println("----------------");
         System.out.println("Motorcycle Info:");
+	System.out.println("----------------");
+        
+	System.out.println("-------------------------");
         motorcycleDucati.displayInfo();
+	System.out.println("-------------------------");
     }
 }
