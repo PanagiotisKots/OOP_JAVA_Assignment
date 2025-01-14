@@ -1,63 +1,63 @@
 // The main Vehicle class
 class Vehicle {
-    private String licenseNumber; // The license plate of the vehicle
-    private String model; // The model of the vehicle
-    private int year; // The year the vehicle was made
+    private String licenseNumber;
+    private String model; 
+    private int year; 
 
-    // Constructor to set up the vehicle details
+    // Constructor of vehicle
     public Vehicle(String licenseNumber, String model, int year) {
         this.licenseNumber = licenseNumber;
         this.model = model;
         this.year = year;
     }
 
-    // Method to show the vehicle info
+    // method that displays vehicle informtion
     public void displayInfo() {
-        System.out.println("License Number: " + licenseNumber); // Print license number
-        System.out.println("Model: " + model); // Print model name
-        System.out.println("Year: " + year); // Print the year it was made
+        System.out.println("License Number: " + licenseNumber); 
+        System.out.println("Model: " + model); 
+        System.out.println("Year: " + year); 
     }
 }
 
-// The Car class, it’s like Vehicle but has more stuff
-class Car extends Vehicle {
-    private String fuelType; // What kind of fuel it uses (like gas, diesel, or electric)
-    private int seatingCapacity; // How many people can sit in it
+// the Car class
+class Car extends Vehicle { //inherits from vehicle class
+    private String fuelType; 
+    private int seatingCapacity; 
 
-    // Constructor to set up the car details
+    // constructor for car class
     public Car(String licenseNumber, String model, int year, String fuelType, int seatingCapacity) {
-        super(licenseNumber, model, year); // Call the Vehicle constructor
+        super(licenseNumber, model, year); // call the Vehicle constructor
         this.fuelType = fuelType;
         this.seatingCapacity = seatingCapacity;
     }
 
-    // This shows the car info, including the extra car stuff
+    // car information printing
     @Override
     public void displayInfo() {
-        super.displayInfo(); // Show the common vehicle info
-        System.out.println("Fuel Type: " + fuelType); // Print fuel type
-        System.out.println("Seating Capacity: " + seatingCapacity); // Print number of seats
+        super.displayInfo(); 
+        System.out.println("Fuel Type: " + fuelType); 
+        System.out.println("Seating Capacity: " + seatingCapacity); 
     }
 }
 
-// The Motorcycle class, it’s a type of Vehicle too
-class Motorcycle extends Vehicle {
-    private String type; // What type of motorcycle it is
-    private int maxSpeed; // How fast it can go
+// the motorcycle class
+class Motorcycle extends Vehicle { //inherits from vehicle
+    private String type; 
+    private int maxSpeed; 
 
-    // Constructor to set up the motorcycle details
+    // constructor for motorcycle
     public Motorcycle(String licenseNumber, String model, int year, String type, int maxSpeed) {
-        super(licenseNumber, model, year); // Call the Vehicle constructor
-        this.type = type; // Set the motorcycle type
-        this.maxSpeed = maxSpeed; //>>>>>>>
+        super(licenseNumber, model, year); // Call the Vehicle constructor again
+        this.type = type; 
+        this.maxSpeed = maxSpeed; 
     }
 
-    // This shows the motorcycle info, including the extra bike stuff
+    // inforation printing
     @Override
     public void displayInfo() {
         super.displayInfo(); // Show the common vehicle info
-        System.out.println("Type: " + type); // Print the motorcycle type
-        System.out.println("Max Speed: " + maxSpeed + " km/h"); // Print max speed
+        System.out.println("Type: " + type); 
+        System.out.println("Max Speed: " + maxSpeed + " km/h"); 
     }
 }
 
@@ -66,19 +66,20 @@ public class Main {
 
     //The main function
     public static void main(String[] args) {
-        // Make a Car object
-        Car car = new Car("KA12345", "Tesla Model 3", 2022, "Electric", 5);
+        // create a car object
+        Car carTesla = new Car("KA12345", "Tesla Model 3", 2022, "Electric", 5);
 
-        // Make a Motorcycle object
-        Motorcycle motorcycle = new Motorcycle("MO67890", "Ducati Panigale V4", 2021, "Sport", 300);
+        // the same way create a motorcycle object
+        Motorcycle motorcycleDucati = new Motorcycle("MO67890", "Ducati Panigale V4", 2021, "Sport", 300);
 
         // Print car info
         System.out.println("Car Info:");
-        car.displayInfo();
+        carTesla.displayInfo();
+        
         System.out.println();
 
         // Print motorcycle info
         System.out.println("Motorcycle Info:");
-        motorcycle.displayInfo();
+        motorcycleDucati.displayInfo();
     }
 }
